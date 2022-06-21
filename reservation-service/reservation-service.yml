@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;DATABASE_TO_UPPER=false;MODE=PostgreSQL
+    username: sa
+    password: sa
+  flyway:
+    url: ${spring.datasource.url}
+    user: ${spring.datasource.username}
+    password: ${spring.datasource.password}
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 2000
+        readTimeout: 30000
+      DOG-SERVICE:
+        connectTimeout: 1000
+        readTimeout: 5000
+      OWNER-SERVICE:
+        connectTimeout: 1000
+        readTimeout: 5000

@@ -1,1 +1,0 @@
-# altkom-scah-configuration-docker
