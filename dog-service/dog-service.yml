@@ -11,7 +11,7 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQL10Dialect
   datasource:
-    url: jdbc:postgresql://altkom-scah-reservation-postgres:5432/reservationdb
+    url: jdbc:postgresql://altkom-scah-dog-postgres:5432/dogdb
     username: postgres
     password: postgres
   flyway:
