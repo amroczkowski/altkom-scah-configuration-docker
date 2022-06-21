@@ -28,3 +28,16 @@ feign:
       OWNER-SERVICE:
         connectTimeout: 1000
         readTimeout: 5000
+  circuitbreaker:
+    enabled: true
+    alphanumeric-ids:
+      enabled: true
+resilience4j:
+  circuitbreaker:
+    configs:
+      default:
+        sliding-window-size: 4
+        failure-rate-threshold: 50
+        wait-duration-in-open-state: 20s
+        permitted-number-of-calls-in-half-open-state: 4
+        automatic-transition-from-open-to-half-open-enabled: true
