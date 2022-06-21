@@ -1,6 +1,11 @@
 spring:
   application:
     name: dog-service
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://altkom-scah-keycloak:8080/auth/realms/app-realm
   jpa:
     properties:
       hibernate:
