@@ -8,7 +8,7 @@ spring:
       client:
         provider:
           keycloak-provider:
-            issuer-uri: http://altkom-scah-keycloak:8080/auth/realms/app-realm
+            issuer-uri: http://localhost:8081/auth/realms/app-realm
         registration:
           keycloak-gateway:
             provider: keycloak-provider
