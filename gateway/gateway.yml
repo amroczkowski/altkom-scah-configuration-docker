@@ -3,19 +3,6 @@ spring:
     name: gateway
   main:
     web-application-type: reactive
-  security:
-    oauth2:
-      client:
-        provider:
-          keycloak-provider:
-            issuer-uri: http://altkom-scah-keycloak:8080/auth/realms/app-realm
-        registration:
-          keycloak-gateway:
-            provider: keycloak-provider
-            client-id: gateway
-            client-secret: rrWCmAIDrM2Dwubcm3AjCYwygKVbtbqV
-            authorization-grant-type: authorization_code
-            redirect-uri: "{baseUrl}/login/oauth2/code/keycloak"
   cloud:
     gateway:
       routes:
